@@ -17,7 +17,15 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
 
+#미디어 파일을 위한 URL 처리
+from django.conf import settings
+from django.conf.urls.static import static
+
 #path('blog', include('blog.urls')),
 urlpatterns = [path('admin/', admin.site.urls),
-path('', include('blog.urls')),
+# path('', include('blog.urls')), # 이걸로 하면 바로  index 나오게 할 수 있음
+path('blog/', include('blog.urls')),
 ]
+
+#미디어 파일을 위한 URL 처리
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

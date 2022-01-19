@@ -1,0 +1,20 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+<h1>Blog</h1>
+
+{#model을 통해서 데이터 가져오는 부분#}
+{% for p in data %}
+<h2>{{ p.date}}</h2>
+{% endfor %}
+
+
+</body>
+
+</html>
