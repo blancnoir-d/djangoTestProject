@@ -8,6 +8,9 @@ urlpatterns = [
     #path('<int:pk>/', views.single_post_page), # 이런 젠장할  url에 http://127.0.0.1:8000/1/ 이렇게 해야 나오네
     path('<int:pk>/', views.PostDetail.as_view()), #CBV로 페이지 만들기
 
+    path('tag/<str:slug>/', views.tag_page), #Tag
+    path('category/<str:slug>/', views.category_page),#카테고리
+
 ]
 # urlpatterns = [
 #     path('', views.index, name='index'),

@@ -23,7 +23,7 @@ from django.conf.urls.static import static
 
 #path('blog', include('blog.urls')),
 urlpatterns = [path('admin/', admin.site.urls),
-# path('', include('blog.urls')), # 이걸로 하면 바로  index 나오게 할 수 있음
+path('', include('blog.urls')), # 이걸로 하면 바로  index 나오게 할 수 있음
 path('blog/', include('blog.urls')),
 ]
 
